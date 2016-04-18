@@ -1,0 +1,6 @@
+framework module auth0LoginComponent {
+  umbrella header "auth0LoginComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

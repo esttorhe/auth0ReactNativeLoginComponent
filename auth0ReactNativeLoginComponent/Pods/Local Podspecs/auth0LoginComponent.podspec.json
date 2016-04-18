@@ -1,0 +1,30 @@
+{
+  "name": "auth0LoginComponent",
+  "version": "0.1.0",
+  "summary": "Small Login Component that interacts with `LinkedIn` and `auth0`.",
+  "description": "`auth0LoginComponent` provides a customizable `UI` login component that integrates with `LinkedIn` `SDK` and with `auth0`.\nThis component allows easy integration and login capabilities via `auth0`.",
+  "homepage": "https://github.com/esttorhe/auth0LoginComponent",
+  "license": "MIT",
+  "authors": {
+    "Esteban Torres": "me@estebantorr.es"
+  },
+  "source": {
+    "git": "https://github.com/esttorhe/auth0LoginComponent.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/esttorhe",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "vendored_frameworks": "linkedin-sdk.framework",
+  "preserve_paths": "linkedin-sdk.framework",
+  "source_files": "auth0LoginComponent/Classes/**/*",
+  "resource_bundles": {
+    "auth0LoginComponent": [
+      "auth0LoginComponent/Assets/UI/*.xib"
+    ]
+  },
+  "requires_arc": true,
+  "private_header_files": "Pod/Classes/*.h",
+  "frameworks": "UIKit"
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-auth0ReactNativeLoginComponent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>React.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>auth0LoginComponent-auth0LoginComponent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>auth0LoginComponent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1B916F4566DE76F0C27A1AD216D752D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20A25B1B4E1E819AFF5B02FFC0C5209C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA3605749D90D5E2A39EEBDAE471A12C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F876BF5D02DEC2B9B523D17786307B00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

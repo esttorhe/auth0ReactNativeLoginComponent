@@ -1,0 +1,17 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'auth0ReactNativeLoginComponent' do
+  pod 'auth0LoginComponent', :git => 'https://github.com/esttorhe/auth0LoginComponent'
+
+   pod 'React', :path => '../node_modules/react-native', :subspecs => [
+     'Core',
+     'RCTImage',
+     'RCTNetwork',
+     'RCTText',
+     'RCTWebSocket',
+   ]
+end
+

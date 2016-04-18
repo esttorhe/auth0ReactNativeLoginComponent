@@ -1,0 +1,1 @@
+../../../../auth0LoginComponent/linkedin-sdk.framework/Headers/LISDKSessionManager.h
