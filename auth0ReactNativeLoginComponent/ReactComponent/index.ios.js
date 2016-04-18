@@ -19,22 +19,30 @@ var styles = React.StyleSheet.create({
 class auth0ReactNativeExample extends React.Component {
    render() {
       var succssSubscription = React.NativeAppEventEmitter.addListener(
-                                                                                'Auth0LoginSuccess',
-                                                                                (accessToken) => {
-                                                                                console.log('ACCESS TOKEN')
-                                                                                console.log('access_token: ' + accessToken.accessToken)
-                                                                                console.log('id_token: ' + accessToken.idToken)
-                                                                                console.log('token_type: ' + accessToken.tokeType)
-                                                                                }
-                                                                                );
+                                                                       'Auth0LoginSuccess',
+                                                                       (accessToken) => {
+                                                                       console.log('ACCESS TOKEN')
+                                                                       console.log('access_token: ' + accessToken.accessToken)
+                                                                       console.log('id_token: ' + accessToken.idToken)
+                                                                       console.log('token_type: ' + accessToken.tokeType)
+                                                                       }
+                                                                       );
       var failureSubscription = React.NativeAppEventEmitter.addListener(
-                                                                                 'Auth0LoginFailed',
-                                                                                 (error) => {
-                                                                                 console.log('ACCESS FAILED')
-                                                                                 console.log('error: ' + error.error)
-                                                                                 }
-                                                                                 );
-
+                                                                        'Auth0LoginFailed',
+                                                                        (error) => {
+                                                                        console.log('ACCESS FAILED')
+                                                                        console.log('error: ' + error.error)
+                                                                        }
+                                                                        );
+      
+      var cancellationSubscription = React.NativeAppEventEmitter.addListener(
+                                                                             'Auth0LoginCancelled',
+                                                                             (params) => {
+                                                                             console.log('ACCESS FLOW CANCELLED')
+                                                                             console.log('message: ' + params.reason)
+                                                                             }
+                                                                             );
+      
       return <AuthLogin style={styles.container}/>;
    }
 }

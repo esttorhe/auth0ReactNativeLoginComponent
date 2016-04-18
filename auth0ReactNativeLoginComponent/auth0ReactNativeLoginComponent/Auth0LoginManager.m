@@ -31,6 +31,8 @@ RCT_EXPORT_MODULE()
          [self.bridge.eventDispatcher sendAppEventWithName:@"Auth0LoginSuccess" body:accessToken];
       } errorHandler:^(NSError * _Nonnull error) {
          [self.bridge.eventDispatcher sendAppEventWithName:@"Auth0LoginFailed" body:@{ @"error": error.localizedDescription }];
+      } cancelHandler:^{
+         [self.bridge.eventDispatcher sendAppEventWithName:@"Auth0LoginCancelled" body:@{ @"reason": @"User cancelled the flow." }];
       }];
       
       return self;
