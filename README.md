@@ -1,6 +1,37 @@
 # auth0ReactNativeLoginComponent
 `ReactNative` component for https://github.com/esttorhe/auth0LoginComponent
 
+## Usage
+
+`auth0ReactNativeLoginComponent` gets exposed as a custom component; this means it can be rendered using only `<AuthLogin />` tags.
+
+The component also exposes 2 events, 1 for when the login calls succeeds and 1 for when it fails.
+The events can be listened as follows:
+
+```javascript
+   render() {
+      var succssSubscription = React.NativeAppEventEmitter.addListener(
+        'Auth0LoginSuccess',
+        (accessToken) => {
+          console.log('ACCESS TOKEN')
+          console.log('access_token: ' + accessToken.accessToken)
+          console.log('id_token: ' + accessToken.idToken)
+          console.log('token_type: ' + accessToken.tokeType)
+        }
+      );
+      
+      var failureSubscription = React.NativeAppEventEmitter.addListener(
+        'Auth0LoginFailed',
+        (error) => {
+          console.log('ACCESS FAILED')
+          console.log('error: ' + error.error)
+        }
+      );
+
+      return <AuthLogin style={styles.container}/>;
+   }
+```
+
 ## Requirements
 
 ### `LinkedIn` `SDK`
